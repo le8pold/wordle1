@@ -2,32 +2,9 @@
 <html>
 <head>
     <title>test</title>
-    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
 </head>
-<body style="background-color: white; text-align: center;">
-    <h2>PyScript Test</h2>
-    <input id="colorInput" placeholder="Type a color">
-    <button id="submitBtn">Apply Color</button>
-    <br><br>
-    <div id="box"
-         style="border: 2px solid black;
-                width: 200px;
-                height: 200px;
-                margin: auto;">
+<body style="background-color: white;">
+    <div style="border: 2px solid black; width: 200px; height: 200px;">
     </div>
-    <py-script>
-from js import document
-def change_color(event):
-    color = document.getElementById("colorInput").value.lower()
-    box = document.getElementById("box")
-    if color == "blue":
-        box.style.backgroundColor = "blue"
-    else:
-        box.style.backgroundColor = "white"
-submit = document.getElementById("submitBtn")
-submit.addEventListener("click", change_color)
-    </py-script>
 </body>
 </html>
-
